@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug (params come ready_to_baby_agent)",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "${workspaceFolder}",
+      "args": [
+        "-extra-reviews",
+        "-depth", "10",
+        "-c", "2",
+        "-json",
+        "-web",
+        "-data-folder", "webdata_debug",
+        "-addr", ":8080"
+      ],
+      "env": {
+        "DISABLE_POSTHOG": "true"
+      },
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Debug (ready_to_baby_agent + browser visibile)",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "${workspaceFolder}",
+      "args": [
+        "-extra-reviews",
+        "-depth", "10",
+        "-c", "2",
+        "-json",
+        "-web",
+        "-debug",
+        "-data-folder", "webdata_debug",
+        "-addr", ":8080"
+      ],
+      "env": {
+        "DISABLE_POSTHOG": "true"
+      },
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
